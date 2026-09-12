@@ -9,5 +9,6 @@ def check_password(password):
     else:
         return "Weak"
 
-print(check_password("Abc@1234"))  # Strong
-print(check_password("abcd1234"))  # Weak
+user_password = input("Enter password to check strength: ")
+password_strength = check_password(user_password)
+print(f"Password strength: {password_strength}")
