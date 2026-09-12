@@ -10,5 +10,8 @@ def check_password(password):
         return "Weak"
 
 user_password = input("Enter password to check strength: ")
-password_strength = check_password(user_password)
-print(f"Password strength: {password_strength}")
+strength = check_password(user_password)
+if strength == "Strong":
+    print("Input meets complexity requirements.")
+else:
+    print("Input does not meet complexity requirements.")
